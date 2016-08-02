@@ -1,0 +1,142 @@
+	form.fullscreen-form{
+	    height: 100%;
+	    width: 100%;
+	    position: fixed; /* Stay in place */
+	    z-index: 1039; /* Sit on top */
+	    left: 0;
+	    top: 0;
+	    background-color: #111111; /* Black w/opacity */
+	    overflow-x: hidden; /* Disable horizontal scroll */
+	    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+	    margin:0;
+	    padding: 0;
+	    color: #FFFFFF;
+	}
+	form.fullscreen-form .active {
+		position: relative;
+	    text-align: left; /* Centered text/links */
+	    z-index: 1040;
+	    margin: 0 auto;
+	    width: 50%;
+		top:25%;
+		display: block;
+	}	
+	form.fullscreen-form .deactivate{
+	    display: none;
+	}
+
+	form.fullscreen-form .select2 {
+		width: 100% !important;
+	}
+	form.fullscreen-form .select2 .selection .select2-selection{
+	  border: none;
+	  border-bottom: 1px solid #FFFFFF;
+	  border-radius: 0;
+	  background-color: transparent;
+
+	}
+	form.fullscreen-form .select2-container *:focus{
+	  outline: none;
+	}
+	form.fullscreen-form span.select2-container--open .select2-results__options .select2-results__option{
+	  padding: 10px 16px 16px 10px;
+	  color: black;
+	}
+	form.fullscreen-form span.select2-container--open .select2-results__options .select2-results__option[aria-selected="true"]{
+	  background-color: Silver;
+	}
+	form.fullscreen-form span.select2-container--open .select2-results__options .select2-results__option--highlighted{
+	  background-color: Gainsboro;
+	}
+	form.fullscreen-form .select2-container--default .select2-selection--single .select2-selection__rendered{
+		color: #FFFFFF;
+	}
+	form.fullscreen-form span.select2-container--open .select2-dropdown .select2-search--dropdown input{
+	  border-radius: 1px;
+	}
+	form.fullscreen-form .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    	background-color: transparent;
+	}
+	form.fullscreen-form .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover{
+		color: #FFFFFF;
+	}
+	.select2-container--default .select2-results__option--highlighted[aria-selected] {
+		background-color: #424242;
+	}
+
+
+
+	form.fullscreen-form button, form.fullscreen-form input[type=button], form.fullscreen-form input[type=reset], form.fullscreen-form input[type=submit],
+	form.fullscreen-form button:active, form.fullscreen-form input[type=button]:active, form.fullscreen-form input[type=reset]:active, form.fullscreen-form input[type=submit]:active,
+	form.fullscreen-form button:hover, form.fullscreen-form input[type=button]:hover, form.fullscreen-form input[type=reset]:hover, form.fullscreen-form input[type=submit]:hover{
+		color: #111;
+		background-color: #FFFFFF;
+	}
+
+	form.fullscreen-form input[type='text'], form.fullscreen-form input[type='email'], form.fullscreen-form input[type='password'], form.fullscreen-form input[type='radio'], form.fullscreen-form input[type='checkbox'], form.fullscreen-form textarea, form.fullscreen-form select{
+			background-color: transparent;
+		    border: none;
+		    border-bottom: 1px solid #CCCCCC;
+		    border-radius: 0;
+		    outline: none;
+		    width: 100%;
+		    font-size: 2rem;
+		    margin: 0 0 15px 0;
+		    padding: 0;
+		    box-shadow: none;
+		    box-sizing: content-box;
+		    transition: all 0.3s;
+		    color: #FFFFFF;
+	}
+	form.fullscreen-form input{
+		height: 3rem;
+	}
+	form.fullscreen-form ::-webkit-input-placeholder{
+		color: #FFFFFF;
+	}
+	form.fullscreen-form ::-moz-placeholder{
+		color: #FFFFFF;
+	}
+	form.fullscreen-form :-moz-placeholder{
+		color: #FFFFFF;
+	}
+	form.fullscreen-form :-ms-input-placeholder{
+		color: #FFFFFF;
+	}
+	form.fullscreen-form .active label.error {
+		font-size: 1em;
+		color: #ff5722;
+	}
+
+	form.fullscreen-form input:focus, form.fullscreen-form textarea:focus{
+		border-bottom: 1px solid #FFFFFF;
+		box-shadow: 0 1px 0 0 #FFFFFF;
+	}
+
+	form.fullscreen-form label > input{ /* HIDE RADIO */
+	  visibility: hidden; /* Makes input not-clickable */
+	  position: absolute; /* Remove input from document flow */
+	}
+	form.fullscreen-form label > input + img{ /* IMAGE STYLES */
+	  cursor:pointer;
+	  border:2px solid transparent;
+	}
+	form.fullscreen-form label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+	  border:2px solid #f00;
+	}
+
+
+	label {
+		color: #FFFFFF;
+		font-size: 3rem;
+	}
+	form.fullscreen-form .help-block{
+		color: #FFFFFF;
+	}
+	form.fullscreen-form .form-group{
+		width: 50%;
+	}
+	
+	form.fullscreen-form img {
+		width: 100px;
+	}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Text Input Control</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css">
+<link rel="stylesheet" href="fullscreen-form.css">
+
+<style type="text/css">
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
+<script type="text/javascript" src="fullscreen-form.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		var signupvalidationrules = {
+	      rules: {
+	      	fb: {
+	      		required: true
+	      	},
+	        exampleInputEmail: {
+	          required: true,
+	          email: true,
+	          minlength: 6
+	        },
+	        exampleInputPassword: {
+	          required: true,
+	          minlength: 6
+	        },
+	        exampleInputFile: {
+	          required: true
+	        }
+	      },
+		    errorPlacement: function(error, element) {
+		      if(element.attr("type") == "radio") {
+		      	$(element).closest('.form-group').append(error);
+		      } else {
+		      	$(element).after(error);
+		      }
+		    }
+	    };
+
+	    var $signupvalidator = $("#test").validate(signupvalidationrules);
+
+
+		$(".js-example-basic-single").select2();
+		$("#test").fullScreenForm();
+
+
+
+	});
+</script>
+</head>
+<body>
+<form class="row" id="test">
+  <div class="form-group" data-show-next="false">
+	<label>
+	  <img src="http://dev-dot-stage-1329.appspot.com/img/Group.png">
+	  <input type="radio" name="fb" value="small"  onchange="jQuery.gotonext()"/>
+	</label>
+	<label>
+	  <img src="http://128.199.127.61/media/CACHE/images/images/2016/07/02/IMG_5477/251d582a6b6d100d3499b9a33a1d99ed.JPG">
+	  <input type="radio" name="fb" value="large" onchange="$.gotonext()" />
+	</label>
+	<label>
+	  <img src="http://128.199.127.61/media/CACHE/images/images/2016/07/09/ee0a219e-1aef-4fa9-8dc2-e2c4e9309481_original/580a097b93a2fa29b350c37fc2f86563.jpg">
+	  <input type="radio" name="fb" value="large2" onchange="$.gotonext()" />
+	</label>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail" class="">What is your Location?</label>
+    <select class="js-example-basic-single" multiple="multiple">
+	  <option value="AL">Alabama</option>
+	  <option value="WY">Wyoming</option>
+	</select>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail" class="">What is your Location?</label>
+    <select class="js-example-basic-single">
+	  <option value="AL">Alabama</option>
+	  <option value="WY">Wyoming</option>
+	</select>
+  </div>
+  <div class="form-group" data-show-next="true">
+    <label for="exampleInputEmail" class="">What is your Email address?</label>
+    <input type="email" class="form-control" name="exampleInputEmail" id="exampleInputEmail1" placeholder="">
+    <p class="help-block">Example block-level help text here.</p>
+
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword">Set your Password</label>
+    <input type="password" class="form-control" name="exampleInputPassword" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile" name="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+  </div>
+  <div class="form-group">
+    <input type="submit" name="submit" value="Submit">
+  </div>
+</form>
+</body>
+</html>
