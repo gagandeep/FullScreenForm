@@ -3,15 +3,13 @@
 	var fullscreen = function(options) {
 		var settings = $.extend({
             // These are the defaults.
-            color: "#556b2f",
-            backgroundColor: "#111",
-
+            'color': "#ffffff",
+            'background-color': "#111111"
         }, options );
 
-		$(this).addClass('fullscreen-form');
+		$(this).addClass('fullscreen-form').css(settings);
 		$(".fullscreen-form > *").addClass('deactivate');
 		var active = $(".fullscreen-form >*:first-child").removeClass('deactivate').addClass('active animated slideInRight');
-
 
 		if (!active.is(':last-child') && active.data('show-next')!==false){
 			active.append('<div class="next clearfix"><div class="pull-right"><small>Press Enter or <button class="btn btn-sm">Next</button><small></div></div>');
